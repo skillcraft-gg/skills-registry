@@ -331,7 +331,7 @@ function mapMarketplaceSkillToId(source, rawSkillRef) {
 
   const slug = parts.at(-1)
   const owner = parts.length === 2 ? parts[0] : source
-  const id = parts.length === 2 ? `~${source}/${parts[0]}/${parts[1]}` : `~${source}/${parts[0]}`
+  const id = parts.length === 2 ? `${source}:${parts[0]}/${parts[1]}` : `${source}:${parts[0]}`
 
   return {
     source,
@@ -584,7 +584,7 @@ function isValidSearchIndexIdentifier(value) {
     return true
   }
 
-  return /^~[a-zA-Z0-9][a-zA-Z0-9._-]*\/[a-zA-Z0-9][a-zA-Z0-9._-]*(?:\/[a-zA-Z0-9][a-zA-Z0-9._-]*)?$/.test(value)
+  return /^[a-zA-Z0-9][a-zA-Z0-9._-]*:[a-zA-Z0-9][a-zA-Z0-9._-]*(?:\/[a-zA-Z0-9][a-zA-Z0-9._-]*)?$/.test(value)
 }
 
 function parseYaml(input) {

@@ -19,8 +19,8 @@ Local registry IDs:
 External marketplace IDs are not local registry IDs. These may appear in external
 search index entries only:
 
-`~source/<slug>`
-`~source/<owner>/<slug>`
+`source:<slug>`
+`source:<owner>/<slug>`
 
 Example:
 

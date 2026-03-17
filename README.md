@@ -43,8 +43,8 @@ This file is updated by GitHub Actions on every push to `main` when `skills/*/*/
 changes, and by manual `workflow_dispatch` runs.
 
 It contains a sorted list of local and external entries. Local IDs are
-`owner/slug`. External IDs currently include `~anthropic/<slug>` and
-`~anthropic/<owner>/<slug>`.
+`owner/slug`. External IDs currently include `anthropic:<slug>` and
+`anthropic:<owner>/<slug>`.
 
 External registries are configured via JSON files under `external/`.
 Each file contains `id`, `marketplaceUrl`, `repositoryBaseUrl`, and
