@@ -1,0 +1,40 @@
+name: Validate and merge skill submissions
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+    paths:
+      - 'skills/*/*/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Validate skill paths and payloads
+        id: validate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/scripts/validate-skill-pr.mjs
+
+  auto-merge:
+    needs: [validate]
+    if: needs.validate.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-merge validated skill PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/scripts/merge-skill-pr.mjs

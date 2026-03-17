@@ -1,0 +1,189 @@
+[
+  {
+    "id": "~anthropic/algorithmic-art",
+    "name": "algorithmic-art",
+    "path": "skills/algorithmic-art",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/",
+    "owner": "anthropic",
+    "slug": "algorithmic-art",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:40.714Z"
+  },
+  {
+    "id": "~anthropic/brand-guidelines",
+    "name": "brand-guidelines",
+    "path": "skills/brand-guidelines",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/brand-guidelines/",
+    "owner": "anthropic",
+    "slug": "brand-guidelines",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:40.958Z"
+  },
+  {
+    "id": "~anthropic/canvas-design",
+    "name": "canvas-design",
+    "path": "skills/canvas-design",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/canvas-design/",
+    "owner": "anthropic",
+    "slug": "canvas-design",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:41.201Z"
+  },
+  {
+    "id": "~anthropic/claude-api",
+    "name": "claude-api",
+    "path": "skills/claude-api",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/",
+    "owner": "anthropic",
+    "slug": "claude-api",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:43.570Z"
+  },
+  {
+    "id": "~anthropic/doc-coauthoring",
+    "name": "doc-coauthoring",
+    "path": "skills/doc-coauthoring",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/",
+    "owner": "anthropic",
+    "slug": "doc-coauthoring",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:41.447Z"
+  },
+  {
+    "id": "~anthropic/docx",
+    "name": "docx",
+    "path": "skills/docx",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/docx/",
+    "owner": "anthropic",
+    "slug": "docx",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:39.951Z"
+  },
+  {
+    "id": "~anthropic/frontend-design",
+    "name": "frontend-design",
+    "path": "skills/frontend-design",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/",
+    "owner": "anthropic",
+    "slug": "frontend-design",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:41.681Z"
+  },
+  {
+    "id": "~anthropic/internal-comms",
+    "name": "internal-comms",
+    "path": "skills/internal-comms",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/internal-comms/",
+    "owner": "anthropic",
+    "slug": "internal-comms",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:41.926Z"
+  },
+  {
+    "id": "~anthropic/mcp-builder",
+    "name": "mcp-builder",
+    "path": "skills/mcp-builder",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/",
+    "owner": "anthropic",
+    "slug": "mcp-builder",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:42.160Z"
+  },
+  {
+    "id": "~anthropic/pdf",
+    "name": "pdf",
+    "path": "skills/pdf",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/pdf/",
+    "owner": "anthropic",
+    "slug": "pdf",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:40.486Z"
+  },
+  {
+    "id": "~anthropic/pptx",
+    "name": "pptx",
+    "path": "skills/pptx",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/pptx/",
+    "owner": "anthropic",
+    "slug": "pptx",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:40.188Z"
+  },
+  {
+    "id": "~anthropic/skill-creator",
+    "name": "skill-creator",
+    "path": "skills/skill-creator",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/",
+    "owner": "anthropic",
+    "slug": "skill-creator",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:42.388Z"
+  },
+  {
+    "id": "~anthropic/slack-gif-creator",
+    "name": "slack-gif-creator",
+    "path": "skills/slack-gif-creator",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/slack-gif-creator/",
+    "owner": "anthropic",
+    "slug": "slack-gif-creator",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:42.635Z"
+  },
+  {
+    "id": "~anthropic/theme-factory",
+    "name": "theme-factory",
+    "path": "skills/theme-factory",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/theme-factory/",
+    "owner": "anthropic",
+    "slug": "theme-factory",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:42.865Z"
+  },
+  {
+    "id": "~anthropic/web-artifacts-builder",
+    "name": "web-artifacts-builder",
+    "path": "skills/web-artifacts-builder",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/web-artifacts-builder/",
+    "owner": "anthropic",
+    "slug": "web-artifacts-builder",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:43.095Z"
+  },
+  {
+    "id": "~anthropic/webapp-testing",
+    "name": "webapp-testing",
+    "path": "skills/webapp-testing",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/",
+    "owner": "anthropic",
+    "slug": "webapp-testing",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:43.331Z"
+  },
+  {
+    "id": "~anthropic/xlsx",
+    "name": "xlsx",
+    "path": "skills/xlsx",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/xlsx/",
+    "owner": "anthropic",
+    "slug": "xlsx",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-03-17T02:44:39.719Z"
+  }
+]

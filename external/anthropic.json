@@ -1,0 +1,6 @@
+{
+  "id": "anthropic",
+  "marketplaceUrl": "https://raw.githubusercontent.com/anthropics/skills/main/.claude-plugin/marketplace.json",
+  "repositoryBaseUrl": "https://raw.githubusercontent.com/anthropics/skills/main",
+  "pagesBaseUrl": "https://github.com/anthropics/skills/blob/main"
+}

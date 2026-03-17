@@ -1,0 +1,38 @@
+name: Build skills search index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'skills/*/*/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build search index
+        env:
+          SKILLCRAFT_PAGES_BASE_URL: https://skillcraft.gg
+        run: node .github/scripts/build-search-index.mjs
+
+      - name: Commit updated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add search/index.json
+          if git diff --cached --quiet; then
+            echo "No search index changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh skills search index"
+          git push

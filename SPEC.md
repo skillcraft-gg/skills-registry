@@ -1,71 +1,171 @@
-# Skillcraft Pages Site Specification
+# Skills Registry Specification
 
 ## Purpose
 
-The `skillcraft-gg.github.io` repository is the canonical static site for
-`skillcraft.gg` and owns rendering for public routes:
+The skills repository hosts the canonical registry of installable skills.
 
-- `/`
-- `/docs`
-- `/skills`
-- `/loadouts`
-- `/credentials`
+Site published at:
 
-It has no runtime backend and is deployed as static assets via GitHub Pages.
+skillcraft.gg/skills (rendered by skillcraft-gg.github.io)
 
-## Source Repositories
+---
 
-The site renders route content from registry repositories during build:
+## Identifier Format
 
-- `skillcraft-gg/skills` provides skill definitions and assets.
-- `skillcraft-gg/loadouts` provides loadout definitions.
-- `skillcraft-gg/credentials` provides credential definitions and issued credentials.
+Local registry IDs:
 
-## Build and Publish Model
+`owner/slug`
 
-The site is regenerated from source data and deployed when registries change.
+External marketplace IDs are not local registry IDs. These may appear in external
+search index entries only:
 
-- Source repos include changes that affect published definitions.
-- On change, those repos dispatch events to this repository.
-- Build jobs fetch the latest checked sources, validate them, and produce static pages.
-- Build artifacts are deployed to GitHub Pages.
+`~source/<slug>`
+`~source/<owner>/<slug>`
 
-This model preserves `/` and `/docs` from `skillcraft` while ensuring registry
-routes are synchronized when source changes.
+Example:
 
-## Routes
+blairhudson/threat-model
 
-- `/`
-- `/docs`
-- `/skills`
-- `/skills/<owner>/<slug>`
-- `/loadouts`
-- `/loadouts/<owner>/<slug>`
-- `/credentials`
-- `/credentials/users/<github>`
+Search index external sources are declared as individual JSON files under
+`skills/external/*.json`. Each file should contain:
 
-## GitHub Actions Rebuild Triggers
+- `id`
+- `marketplaceUrl`
+- `repositoryBaseUrl`
+- `pagesBaseUrl`
 
-- `repository_dispatch` events from `skillcraft-gg/skills`, `skillcraft-gg/loadouts`, and `skillcraft-gg/credentials`.
-- Manual workflow dispatch for explicit rebuilds.
+The build script discovers all `*.json` files in that directory and fails
+the run if any file is invalid or missing required fields.
 
-Rebuild inputs should include changed source repo and commit information so stale
-cache windows can be avoided.
+---
 
-## Validation and Safety
+## Repository Layout
 
-Builds must validate registry payload shape before publishing.
+skills/
+/
+/
+SKILL.md
+skill.yaml
+scripts/
+references/
+assets/
 
-- required files exist
-- identifier format is valid
-- definitions satisfy expected schema
-- cross-registry references are consistent
+---
 
-On validation failures, the build must fail and not publish broken routes.
+## Skill Definition
 
-## Failure Modes
+Example:
 
-- If one or more source repos are unavailable, the build should fail fast with
-  clear diagnostics.
-- Optional cached snapshots may be used for local development only, not for
-  production publish.
+```yaml
+id: blairhudson/threat-model
+name: Threat Model
+owner: blairhudson
+runtime:
+  - opencode
+tags:
+  - security
+
+
+⸻
+
+Validation
+
+GitHub Actions validate:
+	•	SKILL.md presence
+	•	Agent Skills compliance
+	•	identifier format
+	•	schema validity
+
+⸻
+
+Publishing
+
+Skills are submitted via PR.
+
+CLI command:
+
+skillcraft skills publish <owner>/<slug>
+
+
+⸻
+
+GitHub Pages
+
+Published at:
+
+skillcraft.gg/skills (rendered by skillcraft-gg.github.io)
+
+Source of truth:
+
+The registry data in this repository.
+
+Routes:
+
+/skills/<owner>/<slug>
+
+---
+
+# `loadouts/SPEC.md`
+
+```markdown
+# Loadouts Registry Specification
+
+## Purpose
+
+Defines bundles of skills.
+
+Site published at:
+
+skillcraft.gg/loadouts
+
+---
+
+## Identifier Format
+
+/
+
+Example:
+
+blairhudson/secure-dev
+
+---
+
+## Repository Layout
+
+loadouts/
+/
+/
+loadout.yaml
+
+---
+
+## Loadout Definition
+
+```yaml
+id: blairhudson/secure-dev
+name: Secure Dev
+skills:
+  - blairhudson/threat-model
+  - skillcraft-gg/code-review
+
+
+⸻
+
+Validation
+
+Actions verify:
+	•	referenced skills exist
+	•	identifier format
+	•	schema compliance
+
+⸻
+
+GitHub Pages
+
+Published at:
+
+skillcraft.gg/loadouts
+
+Routes:
+
+/loadouts/<owner>/<slug>
