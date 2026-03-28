@@ -37,7 +37,7 @@ This repo is served directly as static assets on GitHub Pages. Every file under
 
 The site also exposes a generated search catalog at:
 
-- `/skills/search/index.json`
+- `/skills-registry/search/index.json`
 
 This file is updated by GitHub Actions on every push to `main` when `skills/*/*/**`
 changes, and by manual `workflow_dispatch` runs.
