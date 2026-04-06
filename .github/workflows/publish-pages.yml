@@ -52,3 +52,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
+
+  dispatch-site-rebuild:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: ${{ needs.deploy.result == 'success' }}
+
+    steps:
+      - name: Create org dispatch app token
+        uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.ORG_DISPATCH_APP_ID }}
+          private-key: ${{ secrets.ORG_DISPATCH_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Dispatch Skillcraft Pages publish
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: >
+          gh workflow run publish.yml
+          --repo skillcraft-gg/skillcraft-gg.github.io
+          --ref main
+          -f reason=skills-registry-pages
+          -f source_repo=${{ github.repository }}
