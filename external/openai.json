@@ -1,0 +1,7 @@
+{
+  "id": "openai",
+  "directoryListingUrl": "https://api.github.com/repos/openai/skills/contents/skills/.curated",
+  "skillsDirectoryPath": "skills/.curated",
+  "repositoryBaseUrl": "https://raw.githubusercontent.com/openai/skills/main",
+  "pagesBaseUrl": "https://github.com/openai/skills/blob/main"
+}

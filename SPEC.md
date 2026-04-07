@@ -27,12 +27,13 @@ Example:
 blairhudson/threat-model
 
 Search index external sources are declared as individual JSON files under
-`skills/external/*.json`. Each file should contain:
+`external/*.json`. Each file should contain:
 
 - `id`
-- `marketplaceUrl`
 - `repositoryBaseUrl`
 - `pagesBaseUrl`
+- either `marketplaceUrl`
+- or `directoryListingUrl` and `skillsDirectoryPath`
 
 The build script discovers all `*.json` files in that directory and fails
 the run if any file is invalid or missing required fields.

@@ -8,7 +8,7 @@
     "slug": "algorithmic-art",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:40.714Z"
+    "updatedAt": "2026-04-07T13:58:17.152Z"
   },
   {
     "id": "anthropic:brand-guidelines",
@@ -19,7 +19,7 @@
     "slug": "brand-guidelines",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:40.958Z"
+    "updatedAt": "2026-04-07T13:58:17.460Z"
   },
   {
     "id": "anthropic:canvas-design",
@@ -30,7 +30,7 @@
     "slug": "canvas-design",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:41.201Z"
+    "updatedAt": "2026-04-07T13:58:17.701Z"
   },
   {
     "id": "anthropic:claude-api",
@@ -41,7 +41,7 @@
     "slug": "claude-api",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:43.570Z"
+    "updatedAt": "2026-04-07T13:58:20.635Z"
   },
   {
     "id": "anthropic:doc-coauthoring",
@@ -52,7 +52,7 @@
     "slug": "doc-coauthoring",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:41.447Z"
+    "updatedAt": "2026-04-07T13:58:18.139Z"
   },
   {
     "id": "anthropic:docx",
@@ -63,7 +63,7 @@
     "slug": "docx",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:39.951Z"
+    "updatedAt": "2026-04-07T13:58:15.522Z"
   },
   {
     "id": "anthropic:frontend-design",
@@ -74,7 +74,7 @@
     "slug": "frontend-design",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:41.681Z"
+    "updatedAt": "2026-04-07T13:58:18.364Z"
   },
   {
     "id": "anthropic:internal-comms",
@@ -85,7 +85,7 @@
     "slug": "internal-comms",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:41.926Z"
+    "updatedAt": "2026-04-07T13:58:18.651Z"
   },
   {
     "id": "anthropic:mcp-builder",
@@ -96,7 +96,7 @@
     "slug": "mcp-builder",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:42.160Z"
+    "updatedAt": "2026-04-07T13:58:18.852Z"
   },
   {
     "id": "anthropic:pdf",
@@ -107,7 +107,7 @@
     "slug": "pdf",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:40.486Z"
+    "updatedAt": "2026-04-07T13:58:16.747Z"
   },
   {
     "id": "anthropic:pptx",
@@ -118,7 +118,7 @@
     "slug": "pptx",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:40.188Z"
+    "updatedAt": "2026-04-07T13:58:16.437Z"
   },
   {
     "id": "anthropic:skill-creator",
@@ -129,7 +129,7 @@
     "slug": "skill-creator",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:42.388Z"
+    "updatedAt": "2026-04-07T13:58:19.201Z"
   },
   {
     "id": "anthropic:slack-gif-creator",
@@ -140,7 +140,7 @@
     "slug": "slack-gif-creator",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:42.635Z"
+    "updatedAt": "2026-04-07T13:58:19.436Z"
   },
   {
     "id": "anthropic:theme-factory",
@@ -151,7 +151,7 @@
     "slug": "theme-factory",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:42.865Z"
+    "updatedAt": "2026-04-07T13:58:19.815Z"
   },
   {
     "id": "anthropic:web-artifacts-builder",
@@ -162,7 +162,7 @@
     "slug": "web-artifacts-builder",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:43.095Z"
+    "updatedAt": "2026-04-07T13:58:20.069Z"
   },
   {
     "id": "anthropic:webapp-testing",
@@ -173,7 +173,7 @@
     "slug": "webapp-testing",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:43.331Z"
+    "updatedAt": "2026-04-07T13:58:20.326Z"
   },
   {
     "id": "anthropic:xlsx",
@@ -184,6 +184,468 @@
     "slug": "xlsx",
     "runtime": [],
     "tags": [],
-    "updatedAt": "2026-03-17T02:44:39.719Z"
+    "updatedAt": "2026-04-07T13:58:15.007Z"
+  },
+  {
+    "id": "openai:aspnet-core",
+    "name": "aspnet-core",
+    "path": "skills/.curated/aspnet-core",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/aspnet-core/",
+    "owner": "openai",
+    "slug": "aspnet-core",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:21.350Z"
+  },
+  {
+    "id": "openai:chatgpt-apps",
+    "name": "chatgpt-apps",
+    "path": "skills/.curated/chatgpt-apps",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/chatgpt-apps/",
+    "owner": "openai",
+    "slug": "chatgpt-apps",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:21.862Z"
+  },
+  {
+    "id": "openai:cloudflare-deploy",
+    "name": "cloudflare-deploy",
+    "path": "skills/.curated/cloudflare-deploy",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/cloudflare-deploy/",
+    "owner": "openai",
+    "slug": "cloudflare-deploy",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:22.169Z"
+  },
+  {
+    "id": "openai:develop-web-game",
+    "name": "develop-web-game",
+    "path": "skills/.curated/develop-web-game",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/develop-web-game/",
+    "owner": "openai",
+    "slug": "develop-web-game",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:22.478Z"
+  },
+  {
+    "id": "openai:doc",
+    "name": "doc",
+    "path": "skills/.curated/doc",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/doc/",
+    "owner": "openai",
+    "slug": "doc",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:23.399Z"
+  },
+  {
+    "id": "openai:figma",
+    "name": "figma",
+    "path": "skills/.curated/figma",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma/",
+    "owner": "openai",
+    "slug": "figma",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:26.060Z"
+  },
+  {
+    "id": "openai:figma-code-connect-components",
+    "name": "figma-code-connect-components",
+    "path": "skills/.curated/figma-code-connect-components",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-code-connect-components/",
+    "owner": "openai",
+    "slug": "figma-code-connect-components",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:23.710Z"
+  },
+  {
+    "id": "openai:figma-create-design-system-rules",
+    "name": "figma-create-design-system-rules",
+    "path": "skills/.curated/figma-create-design-system-rules",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-create-design-system-rules/",
+    "owner": "openai",
+    "slug": "figma-create-design-system-rules",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:24.218Z"
+  },
+  {
+    "id": "openai:figma-create-new-file",
+    "name": "figma-create-new-file",
+    "path": "skills/.curated/figma-create-new-file",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-create-new-file/",
+    "owner": "openai",
+    "slug": "figma-create-new-file",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:24.524Z"
+  },
+  {
+    "id": "openai:figma-generate-design",
+    "name": "figma-generate-design",
+    "path": "skills/.curated/figma-generate-design",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-generate-design/",
+    "owner": "openai",
+    "slug": "figma-generate-design",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:24.834Z"
+  },
+  {
+    "id": "openai:figma-generate-library",
+    "name": "figma-generate-library",
+    "path": "skills/.curated/figma-generate-library",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-generate-library/",
+    "owner": "openai",
+    "slug": "figma-generate-library",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:25.096Z"
+  },
+  {
+    "id": "openai:figma-implement-design",
+    "name": "figma-implement-design",
+    "path": "skills/.curated/figma-implement-design",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-implement-design/",
+    "owner": "openai",
+    "slug": "figma-implement-design",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:25.447Z"
+  },
+  {
+    "id": "openai:figma-use",
+    "name": "figma-use",
+    "path": "skills/.curated/figma-use",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/figma-use/",
+    "owner": "openai",
+    "slug": "figma-use",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:25.754Z"
+  },
+  {
+    "id": "openai:frontend-skill",
+    "name": "frontend-skill",
+    "path": "skills/.curated/frontend-skill",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/frontend-skill/",
+    "owner": "openai",
+    "slug": "frontend-skill",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:26.370Z"
+  },
+  {
+    "id": "openai:gh-address-comments",
+    "name": "gh-address-comments",
+    "path": "skills/.curated/gh-address-comments",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/gh-address-comments/",
+    "owner": "openai",
+    "slug": "gh-address-comments",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:26.674Z"
+  },
+  {
+    "id": "openai:gh-fix-ci",
+    "name": "gh-fix-ci",
+    "path": "skills/.curated/gh-fix-ci",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/gh-fix-ci/",
+    "owner": "openai",
+    "slug": "gh-fix-ci",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:26.982Z"
+  },
+  {
+    "id": "openai:imagegen",
+    "name": "imagegen",
+    "path": "skills/.curated/imagegen",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/imagegen/",
+    "owner": "openai",
+    "slug": "imagegen",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:27.290Z"
+  },
+  {
+    "id": "openai:jupyter-notebook",
+    "name": "jupyter-notebook",
+    "path": "skills/.curated/jupyter-notebook",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/jupyter-notebook/",
+    "owner": "openai",
+    "slug": "jupyter-notebook",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:27.593Z"
+  },
+  {
+    "id": "openai:linear",
+    "name": "linear",
+    "path": "skills/.curated/linear",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/linear/",
+    "owner": "openai",
+    "slug": "linear",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:27.903Z"
+  },
+  {
+    "id": "openai:netlify-deploy",
+    "name": "netlify-deploy",
+    "path": "skills/.curated/netlify-deploy",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/netlify-deploy/",
+    "owner": "openai",
+    "slug": "netlify-deploy",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:28.210Z"
+  },
+  {
+    "id": "openai:notion-knowledge-capture",
+    "name": "notion-knowledge-capture",
+    "path": "skills/.curated/notion-knowledge-capture",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-knowledge-capture/",
+    "owner": "openai",
+    "slug": "notion-knowledge-capture",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:28.450Z"
+  },
+  {
+    "id": "openai:notion-meeting-intelligence",
+    "name": "notion-meeting-intelligence",
+    "path": "skills/.curated/notion-meeting-intelligence",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-meeting-intelligence/",
+    "owner": "openai",
+    "slug": "notion-meeting-intelligence",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:28.723Z"
+  },
+  {
+    "id": "openai:notion-research-documentation",
+    "name": "notion-research-documentation",
+    "path": "skills/.curated/notion-research-documentation",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-research-documentation/",
+    "owner": "openai",
+    "slug": "notion-research-documentation",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:29.030Z"
+  },
+  {
+    "id": "openai:notion-spec-to-implementation",
+    "name": "notion-spec-to-implementation",
+    "path": "skills/.curated/notion-spec-to-implementation",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/notion-spec-to-implementation/",
+    "owner": "openai",
+    "slug": "notion-spec-to-implementation",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:29.925Z"
+  },
+  {
+    "id": "openai:openai-docs",
+    "name": "openai-docs",
+    "path": "skills/.curated/openai-docs",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/",
+    "owner": "openai",
+    "slug": "openai-docs",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:30.261Z"
+  },
+  {
+    "id": "openai:pdf",
+    "name": "pdf",
+    "path": "skills/.curated/pdf",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/pdf/",
+    "owner": "openai",
+    "slug": "pdf",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:30.569Z"
+  },
+  {
+    "id": "openai:playwright",
+    "name": "playwright",
+    "path": "skills/.curated/playwright",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/playwright/",
+    "owner": "openai",
+    "slug": "playwright",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:31.121Z"
+  },
+  {
+    "id": "openai:playwright-interactive",
+    "name": "playwright-interactive",
+    "path": "skills/.curated/playwright-interactive",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/playwright-interactive/",
+    "owner": "openai",
+    "slug": "playwright-interactive",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:30.874Z"
+  },
+  {
+    "id": "openai:render-deploy",
+    "name": "render-deploy",
+    "path": "skills/.curated/render-deploy",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/render-deploy/",
+    "owner": "openai",
+    "slug": "render-deploy",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:31.591Z"
+  },
+  {
+    "id": "openai:screenshot",
+    "name": "screenshot",
+    "path": "skills/.curated/screenshot",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/screenshot/",
+    "owner": "openai",
+    "slug": "screenshot",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:32.000Z"
+  },
+  {
+    "id": "openai:security-best-practices",
+    "name": "security-best-practices",
+    "path": "skills/.curated/security-best-practices",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/security-best-practices/",
+    "owner": "openai",
+    "slug": "security-best-practices",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:32.308Z"
+  },
+  {
+    "id": "openai:security-ownership-map",
+    "name": "security-ownership-map",
+    "path": "skills/.curated/security-ownership-map",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/security-ownership-map/",
+    "owner": "openai",
+    "slug": "security-ownership-map",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:32.613Z"
+  },
+  {
+    "id": "openai:security-threat-model",
+    "name": "security-threat-model",
+    "path": "skills/.curated/security-threat-model",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/security-threat-model/",
+    "owner": "openai",
+    "slug": "security-threat-model",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:32.931Z"
+  },
+  {
+    "id": "openai:sentry",
+    "name": "sentry",
+    "path": "skills/.curated/sentry",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/sentry/",
+    "owner": "openai",
+    "slug": "sentry",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:33.225Z"
+  },
+  {
+    "id": "openai:slides",
+    "name": "slides",
+    "path": "skills/.curated/slides",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/slides/",
+    "owner": "openai",
+    "slug": "slides",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:33.472Z"
+  },
+  {
+    "id": "openai:sora",
+    "name": "sora",
+    "path": "skills/.curated/sora",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/sora/",
+    "owner": "openai",
+    "slug": "sora",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:34.047Z"
+  },
+  {
+    "id": "openai:speech",
+    "name": "speech",
+    "path": "skills/.curated/speech",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/speech/",
+    "owner": "openai",
+    "slug": "speech",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:34.357Z"
+  },
+  {
+    "id": "openai:spreadsheet",
+    "name": "spreadsheet",
+    "path": "skills/.curated/spreadsheet",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/spreadsheet/",
+    "owner": "openai",
+    "slug": "spreadsheet",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:34.663Z"
+  },
+  {
+    "id": "openai:transcribe",
+    "name": "transcribe",
+    "path": "skills/.curated/transcribe",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/transcribe/",
+    "owner": "openai",
+    "slug": "transcribe",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:34.968Z"
+  },
+  {
+    "id": "openai:vercel-deploy",
+    "name": "vercel-deploy",
+    "path": "skills/.curated/vercel-deploy",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/vercel-deploy/",
+    "owner": "openai",
+    "slug": "vercel-deploy",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:35.273Z"
+  },
+  {
+    "id": "openai:winui-app",
+    "name": "winui-app",
+    "path": "skills/.curated/winui-app",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/winui-app/",
+    "owner": "openai",
+    "slug": "winui-app",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:35.533Z"
+  },
+  {
+    "id": "openai:yeet",
+    "name": "yeet",
+    "path": "skills/.curated/yeet",
+    "url": "https://github.com/openai/skills/blob/main/skills/.curated/yeet/",
+    "owner": "openai",
+    "slug": "yeet",
+    "runtime": [],
+    "tags": [],
+    "updatedAt": "2026-04-07T13:58:35.781Z"
   }
 ]

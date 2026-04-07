@@ -241,22 +241,38 @@ function normalizeExternalRegistry(value, filePath) {
 
   const id = String(value.id || '').trim()
   const marketplaceUrl = String(value.marketplaceUrl || '').trim()
+  const directoryListingUrl = String(value.directoryListingUrl || '').trim()
+  const skillsDirectoryPath = String(value.skillsDirectoryPath || '').trim()
   const repositoryBaseUrl = String(value.repositoryBaseUrl || '').trim()
   const pagesBaseUrl = String(value.pagesBaseUrl || '').trim()
 
-  if (!id || !marketplaceUrl || !repositoryBaseUrl || !pagesBaseUrl) {
+  if (!id || !repositoryBaseUrl || !pagesBaseUrl) {
     throw new Error(`External registry config ${filePath} is missing required fields`)
+  }
+
+  if (!marketplaceUrl && !directoryListingUrl) {
+    throw new Error(`External registry config ${filePath} must include marketplaceUrl or directoryListingUrl`)
+  }
+
+  if (directoryListingUrl && !skillsDirectoryPath) {
+    throw new Error(`External registry config ${filePath} must include skillsDirectoryPath when using directoryListingUrl`)
   }
 
   return {
     id,
-    marketplaceUrl,
+    ...(marketplaceUrl ? { marketplaceUrl } : {}),
+    ...(directoryListingUrl ? { directoryListingUrl } : {}),
+    ...(skillsDirectoryPath ? { skillsDirectoryPath } : {}),
     repositoryBaseUrl,
     pagesBaseUrl,
   }
 }
 
 export async function loadExternalRegistry(source) {
+  if (source.directoryListingUrl) {
+    return loadExternalDirectoryRegistry(source)
+  }
+
   const response = await fetch(source.marketplaceUrl, {
     headers: {
       'user-agent': USER_AGENT,
@@ -319,6 +335,57 @@ export async function loadExternalRegistry(source) {
   return pluginSkills
 }
 
+async function loadExternalDirectoryRegistry(source) {
+  const response = await fetch(source.directoryListingUrl, {
+    headers: {
+      'user-agent': USER_AGENT,
+    },
+  })
+
+  if (!response.ok) {
+    throw new Error(`Unable to fetch directory listing for ${source.id}`)
+  }
+
+  const payload = await response.json()
+  if (!Array.isArray(payload)) {
+    return []
+  }
+
+  const entries = []
+  const uniqueSkills = new Set()
+
+  for (const item of payload) {
+    if (!item || item.type !== 'dir' || typeof item.path !== 'string') {
+      continue
+    }
+
+    const mappedId = mapDirectorySkillToId(source, item.path)
+    if (!mappedId || uniqueSkills.has(mappedId.id)) {
+      continue
+    }
+
+    const manifestPath = `${mappedId.relativeDir}/SKILL.md`
+    const docResponse = await loadRemoteText(`${source.repositoryBaseUrl}/${manifestPath}`)
+    const frontMatter = parseFrontMatter(docResponse.text)
+    const title = String(frontMatter.name || '').trim()
+
+    entries.push({
+      id: mappedId.id,
+      name: title || mappedId.slug,
+      path: `${path.posix.join(mappedId.relativeDir, '')}`,
+      url: `${source.pagesBaseUrl}/${mappedId.relativeDir}/`,
+      owner: mappedId.owner,
+      slug: mappedId.slug,
+      runtime: normalizeStringArray(frontMatter.runtime, 'runtime'),
+      tags: normalizeStringArray(frontMatter.tags, 'tags'),
+      updatedAt: docResponse.lastModified || new Date().toISOString(),
+    })
+    uniqueSkills.add(mappedId.id)
+  }
+
+  return entries
+}
+
 function mapMarketplaceSkillToId(source, rawSkillRef) {
   const normalized = rawSkillRef.replace(/^\/+/, '').replace(/\/+$/, '')
   const withoutPrefix = normalized.replace(/^\.\//, '')
@@ -339,6 +406,32 @@ function mapMarketplaceSkillToId(source, rawSkillRef) {
     owner,
     id,
     relativeDir: `skills/${parts.join('/')}`,
+  }
+}
+
+function mapDirectorySkillToId(source, rawPath) {
+  const registryRoot = source.skillsDirectoryPath.replace(/^\/+/, '').replace(/\/+$/, '')
+  const normalized = rawPath.replace(/^\/+/, '').replace(/\/+$/, '')
+  if (!normalized.startsWith(`${registryRoot}/`)) {
+    return undefined
+  }
+
+  const relative = normalized.slice(`${registryRoot}/`.length)
+  const parts = relative.split('/').filter(Boolean)
+  if (!parts.length || parts.length > 2) {
+    return undefined
+  }
+
+  const slug = parts.at(-1)
+  const owner = parts.length === 2 ? parts[0] : source.id
+  const id = parts.length === 2 ? `${source.id}:${parts[0]}/${parts[1]}` : `${source.id}:${parts[0]}`
+
+  return {
+    source: source.id,
+    slug,
+    owner,
+    id,
+    relativeDir: normalized,
   }
 }
 
