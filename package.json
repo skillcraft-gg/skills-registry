@@ -1,0 +1,12 @@
+{
+  "name": "skills-registry",
+  "private": true,
+  "scripts": {
+    "prepare": "sh ./scripts/install-git-hooks.sh",
+    "commitlint": "commitlint --from HEAD~1 --to HEAD"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0"
+  }
+}
