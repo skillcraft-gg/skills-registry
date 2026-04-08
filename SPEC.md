@@ -30,11 +30,15 @@ Search index external sources are declared as individual JSON files under
 `external/*.json`. Each file should contain:
 
 - `id`
+- `repository`
+- `ref`
 - `repositoryBaseUrl`
 - `pagesBaseUrl`
 - either `marketplaceUrl`
 - or `directoryListingUrl` and `skillsDirectoryPath`
 
+Generated search index entries should include install metadata describing how a
+consumer can copy the underlying skill directory into a local project.
 The generated `search/index.json` file is produced during Pages publishing and
 is not committed to `main`.
 

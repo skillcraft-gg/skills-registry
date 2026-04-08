@@ -48,10 +48,12 @@ It contains a sorted list of local and external entries. Local IDs are
 `anthropic:<owner>/<slug>`, and `openai:<slug>`.
 
 External registries are configured via JSON files under `external/`.
-Each file contains `id`, `repositoryBaseUrl`, and `pagesBaseUrl`, plus either
-`marketplaceUrl` or a directory-backed source using `directoryListingUrl` and
-`skillsDirectoryPath`. The build script reads all `*.json` files from this
-directory (sorted by filename) and fails fast if any file is invalid.
+Each file contains `id`, `repository`, `ref`, `repositoryBaseUrl`, and
+`pagesBaseUrl`, plus either `marketplaceUrl` or a directory-backed source using
+`directoryListingUrl` and `skillsDirectoryPath`. The generated search index also
+includes install metadata so downstream tools can materialize a skill into a
+project. The build script reads all `*.json` files from this directory (sorted
+by filename) and fails fast if any file is invalid.
 Set `SKILLCRAFT_EXTERNAL_REGISTRIES_PATH` to override that directory.
 
 Each entry includes `id`, `name`, `path`, `url`, `owner`, `slug`, `runtime`,

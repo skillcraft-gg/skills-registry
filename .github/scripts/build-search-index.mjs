@@ -148,6 +148,15 @@ function parseRecord(input, expectedId) {
   }
 }
 
+function localInstallMetadata(owner, slug) {
+  return {
+    type: 'github-directory',
+    repo: 'skillcraft-gg/skills-registry',
+    ref: 'main',
+    path: `skills/${owner}/${slug}`,
+  }
+}
+
 async function rebuildAndWriteIndex() {
   const rebuilt = []
   const owners = await readDirectoryEntries('skills')
@@ -180,6 +189,7 @@ async function rebuildAndWriteIndex() {
         slug,
         runtime: normalizeStringArray(record.runtime, 'runtime'),
         tags: normalizeStringArray(record.tags, 'tags'),
+        install: localInstallMetadata(owner, slug),
         updatedAt: await fileUpdatedAt(manifestPath),
       })
     }
@@ -252,8 +262,10 @@ function normalizeExternalRegistry(value, filePath) {
   const skillsDirectoryPath = String(value.skillsDirectoryPath || '').trim()
   const repositoryBaseUrl = String(value.repositoryBaseUrl || '').trim()
   const pagesBaseUrl = String(value.pagesBaseUrl || '').trim()
+  const repository = String(value.repository || '').trim()
+  const ref = String(value.ref || '').trim()
 
-  if (!id || !repositoryBaseUrl || !pagesBaseUrl) {
+  if (!id || !repositoryBaseUrl || !pagesBaseUrl || !repository || !ref) {
     throw new Error(`External registry config ${filePath} is missing required fields`)
   }
 
@@ -272,6 +284,8 @@ function normalizeExternalRegistry(value, filePath) {
     ...(skillsDirectoryPath ? { skillsDirectoryPath } : {}),
     repositoryBaseUrl,
     pagesBaseUrl,
+    repository,
+    ref,
   }
 }
 
@@ -333,6 +347,7 @@ export async function loadExternalRegistry(source) {
         slug: mappedId.slug,
         runtime: normalizeStringArray(frontMatter.runtime, 'runtime'),
         tags: normalizeStringArray(frontMatter.tags, 'tags'),
+        install: buildExternalInstallMetadata(source, mappedId.relativeDir),
         updatedAt: docResponse.lastModified || new Date().toISOString(),
       })
       uniqueSkills.add(mappedId.id)
@@ -385,6 +400,7 @@ async function loadExternalDirectoryRegistry(source) {
       slug: mappedId.slug,
       runtime: normalizeStringArray(frontMatter.runtime, 'runtime'),
       tags: normalizeStringArray(frontMatter.tags, 'tags'),
+      install: buildExternalInstallMetadata(source, mappedId.relativeDir),
       updatedAt: docResponse.lastModified || new Date().toISOString(),
     })
     uniqueSkills.add(mappedId.id)
@@ -439,6 +455,15 @@ function mapDirectorySkillToId(source, rawPath) {
     owner,
     id,
     relativeDir: normalized,
+  }
+}
+
+function buildExternalInstallMetadata(source, relativeDir) {
+  return {
+    type: 'github-directory',
+    repo: source.repository,
+    ref: source.ref,
+    path: relativeDir,
   }
 }
 
@@ -595,7 +620,34 @@ function normalizeRecord(entry) {
     slug: String(entry.slug || '').trim(),
     runtime,
     tags,
+    install: normalizeInstall(entry.install),
     updatedAt: String(entry.updatedAt || '').trim(),
+  }
+}
+
+function normalizeInstall(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return undefined
+  }
+
+  const type = String(value.type || '').trim()
+  const repo = String(value.repo || '').trim()
+  const ref = String(value.ref || '').trim()
+  const installPath = String(value.path || '').trim()
+
+  if (!type || !installPath) {
+    return undefined
+  }
+
+  if (type === 'github-directory' && (!repo || !ref)) {
+    return undefined
+  }
+
+  return {
+    type,
+    ...(repo ? { repo } : {}),
+    ...(ref ? { ref } : {}),
+    path: installPath,
   }
 }
 

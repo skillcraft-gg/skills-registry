@@ -49,6 +49,8 @@ tags:
         skillsDirectoryPath: 'skills/.curated',
         repositoryBaseUrl: 'https://raw.githubusercontent.com/openai/skills/main',
         pagesBaseUrl: 'https://github.com/openai/skills/blob/main',
+        repository: 'openai/skills',
+        ref: 'main',
       })
 
       assert.deepStrictEqual(entries, [
@@ -61,6 +63,12 @@ tags:
           slug: 'openai-docs',
           runtime: ['codex'],
           tags: ['docs'],
+          install: {
+            type: 'github-directory',
+            repo: 'openai/skills',
+            ref: 'main',
+            path: 'skills/.curated/openai-docs',
+          },
           updatedAt: 'Mon, 01 Apr 2024 00:00:00 GMT',
         },
         {
@@ -72,6 +80,12 @@ tags:
           slug: 'security-best-practices',
           runtime: ['codex'],
           tags: ['security'],
+          install: {
+            type: 'github-directory',
+            repo: 'openai/skills',
+            ref: 'main',
+            path: 'skills/.curated/security-best-practices',
+          },
           updatedAt: 'Tue, 02 Apr 2024 00:00:00 GMT',
         },
       ])
